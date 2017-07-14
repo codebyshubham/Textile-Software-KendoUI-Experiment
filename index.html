@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" href="kendo/css/kendo.common.min.css"/>
+    <link rel="stylesheet" href="kendo/css/kendo.default.min.css"/>
+
+
+    <link rel="stylesheet" href="css/Material%20Iconic/css/material-design-iconic-font.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+<div class="window">
+    <div class="header">
+        <div class="title">
+            <span class="main">Embroidery</span>
+            -
+            <span class="main">Login</span>
+        </div>
+        <div class="actions">
+            <div id="window-minimize" class="minimize action"></div>
+            <div id="window-maximize" class="maximize action"></div>
+            <div id="window-close" class="close action"></div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="home-container container">
+            <div class="header">
+                <div class="tabs">
+                    <div class="tab-action" data-id="home">Home</div>
+                    <div class="tab-action active" data-id="customer">Customer</div>
+                    <div class="tab-action" data-id="account">Account</div>
+                    <div class="tab-action" data-id="payroll">Payroll</div>
+                    <div class="tab-action" data-id="expense">Expense</div>
+                    <div class="tab-action" data-id="transaction">Transaction</div>
+                    <div class="tab-action" data-id="report">Report</div>
+                    <div class="tab-action" data-id="help">Help</div>
+                </div>
+
+                <div class="language">English</div>
+            </div>
+
+            <div class="tab-container">
+                <div class="tab" data-id="home">i am home</div>
+                <div class="tab-customer tab active" data-id="customer">
+                    <div class="body">
+                        <div class="container-main container active">
+                            <div class="left">
+                                <div class="search">
+                                    <input type="text" value="" placeholder="Search Customer"/>
+                                </div>
+                                <div class="customer-list">
+                                    <div class="customer active">
+                                        <div class="name">
+                                            <span class="party-name">Anery Art</span>
+                                            <br/>
+                                            <span class="owner-name">John Doe</span>
+                                        </div>
+                                        <div class="info">
+                                            <i class="zmdi zmdi-long-arrow-up"></i>
+                                            <span>20,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="customer">
+                                        <div class="name">
+                                            <span class="party-name">Anery Art</span>
+                                            <br/>
+                                            <span class="owner-name">John Doe</span>
+                                        </div>
+                                        <div class="info">
+                                            <i class="zmdi zmdi-long-arrow-up"></i>
+                                            <span>20,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="customer">
+                                        <div class="name">
+                                            <span class="party-name">Anery Art</span>
+                                            <br/>
+                                            <span class="owner-name">John Doe</span>
+                                        </div>
+                                        <div class="info">
+                                            <i class="zmdi zmdi-long-arrow-up"></i>
+                                            <span>20,000</span>
+                                        </div>
+                                    </div>
+                                    <div class="customer">
+                                        <div class="name">
+                                            <span class="party-name">Anery Art</span>
+                                            <br/>
+                                            <span class="owner-name">John Doe</span>
+                                        </div>
+                                        <div class="info">
+                                            <i class="zmdi zmdi-long-arrow-up"></i>
+                                            <span>20,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="add-new-customer">
+                                    <span>Add New Customer </span>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <div class="header">
+                                    <div class="top">
+                                        <div class="title">
+                                            <span class="main">Anery Art</span>
+                                            -
+                                            <span class="sub">John Doe</span>
+                                        </div>
+                                        <div class="actions">
+                                            <div class="btn edit">Edit</div>
+                                            <div class="btn new-transaction">New Transaction</div>
+                                        </div>
+                                    </div>
+                                    <div class="info">
+                                        <div class="status">
+                                            <div class="open">
+                                                <i class="zmdi zmdi-long-arrow-up"></i>
+                                                <span class="amount">5000</span> - Open
+                                            </div>
+                                            <div class="out-of-date">
+                                                <i class="zmdi zmdi-long-arrow-down"></i>
+                                                <span class="amount">5000</span> - Out of date
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="body">
+                                    <div class="transaction-table my-grid"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-add-customer container ">
+                            <div class="box">
+                                <div class="header">
+                                    <span>New Customer</span>
+                                </div>
+                                <div class="body">
+                                    <div class="form">
+                                        <table>
+                                            <tr>
+                                                <td>Party name</td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Owner name</td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mobile no</td>
+                                                <td><input type="text"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Notes</td>
+                                                <td><textarea></textarea></td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <div class="list">
+                                        <div class="btn cancel">Cancel</div>
+                                        <div class="btn save">Save</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-work-payment container">
+                            <div class="top">
+                                <div class="title">
+                                    <span class="name">Work/Payment</span>
+                                    <span class="chalan">&nbsp;&nbsp;#1024</span>
+                                    <span class="party-name">&nbsp;&nbsp;#Anery Art</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="btn cancel">Cancel</div>
+                                    <div class="btn save">Save</div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="work-payment-container">
+                                    <div class="work">
+                                        <div class="top">
+                                            <div class="title">
+                                                <span>Work</span>
+                                                -
+                                                <span>1</span>
+                                            </div>
+                                            <div class="info">patihk</div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="work-container container">
+                                                <div class="title">Work</div>
+                                                <input class="input" type="text"  value="Work-1 D-1004 Q-1000"/>
+                                            </div>
+                                            <div class="date-container container">
+                                                <div class="title">Date</div>
+                                                <input class="input" type="text" value="24/09/1995"/>
+                                            </div>
+                                            <div class="short-container container">
+                                                <div class="title">Short</div>
+                                                <input class="input" type="text" value="2"/>
+                                            </div>
+                                            <div class="plain-container container">
+                                                <div class="title">Plain</div>
+                                                <input class="input" type="text" value="2"/>
+                                            </div>
+                                            <div class="ready-container container">
+                                                <div class="title">Ready</div>
+                                                <input class="input" type="text" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="info-container">
+                                        <div class="content">
+                                            <div class="container">
+                                                <div class="chalan-container item">
+                                                    <div class="title">Chalan</div>
+                                                    <input class="input" type="text" value="2"/>
+                                                </div>
+                                                <div class="net-container item">
+                                                    <div class="title">Net</div>
+                                                    <input class="input" type="text" value="2"/>
+                                                </div>
+                                                <div class="estimate-amount item">
+                                                    <div class="title">Estimate Payment</div>
+                                                    <input class="input" type="text" value="2"/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="payment-container">
+                                        <div class="top">
+                                            <div class="title">
+                                                <span>Payment</span>
+                                                -
+                                                <span>1</span>
+                                            </div>
+                                            <div class="info">
+                                                <span class="estimate">
+                                                    <span>Estimate payment </span>
+                                                    <span>5000</span>
+                                                </span>
+                                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                                <span class="left">
+                                                    <span>10</span>
+                                                    <span>day left</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="content">
+                                            <div class="date-container container">
+                                                <div class="title">Date</div>
+                                                <input class="input" type="text" value="24/09/1995"/>
+                                            </div>
+                                            <div class="payment-type-container container">
+                                                <div class="title">Payment type</div>
+                                                <input class="input" type="text" value="2"/>
+                                            </div>
+                                            <div class="account-container container">
+                                                <div class="title">Account</div>
+                                                <input class="input" type="text" value="2"/>
+                                            </div>
+                                            <div class="amount-container container">
+                                                <div class="title">Amount</div>
+                                                <input class="input" type="text" value="2"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container-new-transaction container">
+                            <div class="top">
+                                <div class="title">
+                                    <span class="name">New Transaction</span>
+                                </div>
+                                <div class="actions">
+                                    <div class="btn cancel">Cancel</div>
+                                    <div class="btn save">Save</div>
+                                </div>
+                            </div>
+                            <div class="body">
+                                <div class="info">
+                                    <input type="text" class="party-name" value="Anery Art"/>
+
+                                    <div class="chalan-container">
+                                        <span>Chalan no</span>
+                                        <input type="text" class="chalan-no" value="1004"/>
+                                    </div>
+                                    <div class="date-container">
+                                        <span>Date</span>
+                                        <input type="text" class="date" value="24/09/1995"/>
+                                    </div>
+                                </div>
+                                <div class="product-list-container">
+                                    <div class="title">
+                                        <span>Product List</span>
+                                    </div>
+                                    <div class="product-list-table my-grid no-scroll"></div>
+                                    <div class="total-container">
+                                        <div class="notes">
+                                            <span>Notes</span>
+                                            <textarea></textarea>
+                                        </div>
+                                        <div class="totals">
+                                            <table>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Sub Total</td>
+                                                    <td>Rs 20,000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="text" class="type" value="Discount percentage">
+                                                        <input type="text" class="value" value="25">
+                                                    </td>
+                                                    <td>Rs 100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Total</td>
+                                                    <td>Rs 19,900</td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab" data-id="expense">i am expense</div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="watcher.js"></script>
+<script src="js/lib/jqurey/jquery-2.1.4.min.js"></script>
+<script src="kendo/js/kendo.all.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        Home();
+
+
+        //enter to focus next input element
+        var inputs = $('input, select, textarea').keypress(function (e) {
+            if (e.which == 13) {
+                e.preventDefault();
+                var nextInput = inputs.get(inputs.index(this) + 1);
+                if (nextInput) {
+                    nextInput.focus();
+                }
+            }
+        });
+    });
+
+
+    function Home() {
+        initHomeTabs();
+        TabContainer();
+    }
+
+    function TabContainer() {
+        TabCustomer();
+    }
+
+    function TabCustomer() {
+        TabCustomerMainContainer();
+        TabCustomerNewTransactionContainer();
+        TabCustomerWorkPayment();
+    }
+
+    function TabCustomerWorkPayment(){
+
+        /*work slection drop down*/
+        var $workSelection = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .work-container > .input");
+        $workSelection.kendoDropDownList({
+            dataSource: [
+                {name: "1 : D-11005 -> Q-5000", id: 0},
+                {name: "1 : D-11005 -> Q-5006", id: 1}
+
+            ],
+            dataTextField: "name",
+            dataValueField: "id"
+        });
+
+        /*work date selection*/
+        var $workDate = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .date-container > .input");
+        $workDate.kendoDatePicker();
+
+
+        /*net selection autocomplete*/
+        var $net = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .net-container > .input");
+        $net.kendoAutoComplete({
+            dataSource: [
+                {name: "Net 30", id: 0},
+                {name: "Net 40", id: 1},
+                {name: "Net 50", id: 1},
+
+            ],
+            dataTextField: "name",
+            dataValueField: "id",
+            filter: "startswith",
+            placeholder: "Select country...",
+            separator: ", "
+        });
+
+
+        /*payment date selection*/
+        var $paymentDate = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .date-container > .input");
+        $paymentDate.kendoDatePicker();
+
+
+        /*payment type*/
+        var $paymenetType = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .payment-type-container > .input");
+        $paymenetType.kendoDropDownList({
+            dataSource: [
+                {name: "Cash", id: 0},
+                {name: "Check", id: 2},
+                {name: "Online", id: 1}
+
+            ],
+            dataTextField: "name",
+            dataValueField: "id"
+        });
+
+
+        /*payment Account Selection*/
+        var $paymentAccount = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .account-container > .input");
+        $paymentAccount.kendoDropDownList({
+            dataSource: [
+                {name: "Arey art HDFC", id: 0},
+                {name: "John SBI", id: 2},
+                {name: "Online", id: 1}
+
+            ],
+            dataTextField: "name",
+            dataValueField: "id",
+            filter: "startswith"
+        });
+
+
+        /*center info container*/
+        infoContainerCenter();
+        $(window).resize(function(){
+            infoContainerCenter();
+        });
+        function infoContainerCenter(){
+            var $infoContainer = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container");
+            $infoContainer.css({
+                "margin-left" : parseInt(($infoContainer.parent().width() - $infoContainer.width())/2) + "px"
+            });
+        }
+    }
+
+    function TabCustomerNewTransactionContainer() {
+
+        /*party name drop down*/
+        var $partyName = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .party-name");
+        $partyName.kendoDropDownList({
+            dataSource: [
+                {name: "shubham", id: 0},
+                {name: "kirtan", id: 1},
+                {name: "prashant", id: 2},
+                {name: "kirtan", id: 3},
+                {name: "prashant", id: 4},
+                {name: "kirtan", id: 5},
+                {name: "prashant", id: 55},
+                {name: "prashant", id: 9},
+                {name: "prashant", id: 91},
+                {name: "prashant", id: 123},
+                {name: "Devani", id: 234}
+            ],
+            dataTextField: "name",
+            dataValueField: "id",
+            filter: "startswith"
+        });
+
+
+        /*dicout type*/
+        var $discount = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals > table > tbody > tr:nth-child(2) > td > .type");
+        $discount.kendoDropDownList({
+            dataSource: [
+                {name: "Discount value", id: 0},
+                {name: "Discount peracentage", id: 1}
+            ],
+            dataTextField: "name",
+            dataValueField: "id"
+        });
+
+
+        /*date picker*/
+        var $date = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .date-container > .date");
+        $date.kendoDatePicker();
+
+
+        /*for table*/
+        var $productListTable = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .product-list-table");
+        var girdProductList = $productListTable.kendoGrid({
+            editable: true,
+            navigatable: true,
+            edit: function (e) {
+                //click on last
+                console.log(e.model.get());
+                if (this.dataSource.view().length == e.model.index + 1) {
+                    var lastToSec = this.dataSource.view()[e.model.index - 1];
+                    girdProductListAddRow();
+                }
+            },
+            columns: [
+                {
+                    field: "index",
+                    title: "#",
+                    width: 55,
+                    sortable: false,
+                    attributes: {
+                        class: "text-align-center",
+                        "data-bind": "html: index"
+                    },
+                    headerAttributes: {
+                        class: "text-align-center"
+                    }
+                },
+                {
+                    field: "designno",
+                    title: "Design-No",
+                    width: 95,
+                    attributes: {
+                        class: "editable-cell"
+                    }
+                },
+                {
+                    field: "description",
+                    title: "Description",
+                    attributes: {
+                        class: "editable-cell"
+                    }
+                },
+                {
+                    field: "qty",
+                    title: "Qty.",
+                    width: 75,
+                    attributes: {
+                        class: "editable-cell text-align-center"
+                    },
+                    headerAttributes: {
+                        class: "text-align-center"
+                    }
+                },
+                {
+                    field: "rate",
+                    title: "Rate",
+                    width: 75,
+                    attributes: {
+                        class: "editable-cell text-align-right"
+                    },
+                    headerAttributes: {
+                        class: "text-align-right"
+                    }
+                },
+                {
+                    field: "amount",
+                    title: "Amount",
+                    width: 100,
+                    attributes: {
+                        class: "editable-cell text-align-right"
+                    },
+                    headerAttributes: {
+                        class: "text-align-right"
+                    }
+                }
+            ],
+            dataSource: {
+                data: [
+                    {
+                        "designno": "1004",
+                        "description": "hello from shubham",
+                        "qty": "100",
+                        "rate": "15",
+                        "amount": "1500"
+                    },
+                    {
+                        "designno": "1005",
+                        "description": "hello from shubham",
+                        "qty": "100",
+                        "rate": "5",
+                        "amount": "1500"
+                    },
+                    {
+                        "designno": "1006",
+                        "description": "hello from shubham",
+                        "qty": "100",
+                        "rate": "15",
+                        "amount": "1500"
+                    },
+                    {"designno": "", "description": "", "qty": "", "rate": "", "amount": ""}
+
+                ],
+                change: function (e) {
+                },
+                schema: {
+                    model: {
+                        id: "main",
+                        fields: {
+                            index: {
+                                sortable: false,
+                                editable: false,
+                                validation: {required: true}
+                            }
+                        }
+                    }
+                }
+            },
+
+            refresh: function () {
+                console.log("asd");
+            },
+            dataBound: function () {
+                var rows = this.tbody.children();
+                var dataItems = this.dataSource.view();
+
+
+                for (var i = 0; i < rows.length; i++) {
+                    var row = rows[i];
+                    var data = dataItems[i];
+                    data.index = i;
+
+                    var text = i + 1;
+
+                    if (i == (rows.length - 1)) {
+                        text = '<i class="zmdi zmdi-more"></i>';
+
+                    }
+                    var viewModel = kendo.observable({
+                        index: text
+                    });
+                    kendo.bind(row, viewModel);
+                }
+
+                this.refocusLastEditedCell();
+            }
+        }).find("table").on("keydown", onGridKeydown);
+
+        girdProductList = $productListTable.data("kendoGrid");
+        function isGirdProductBlankRow(data) {
+            if (data.designno == "" && data.description == "" && data.qty == "" && data.rate == "") {
+                return true;
+            }
+            return false;
+        }
+
+        function girdProductListAddRow() {
+            girdProductList.dataSource.insert(girdProductList.dataSource.view().length, {
+                "designno": "",
+                "description": "",
+                "qty": "",
+                "rate": "",
+                "amount": ""
+            });
+        }
+
+        function onGridKeydown(e) {
+            if (!(e.keyCode === kendo.keys.TAB && e.shiftKey) || e.keyCode === 13) {
+                var grid = $(this).closest("[data-role=grid]").data("kendoGrid");
+                var current = grid.current();
+                if (!current.hasClass("editable-cell")) {
+                    var nextCell = current.nextAll(".editable-cell");
+                    if (!nextCell[0]) {
+                        //search the next row
+                        var nextRow = current.parent().next();
+                        var nextCell = current.parent().next().children(".editable-cell:first");
+                    }
+                    grid.current(nextCell);
+                    grid.editCell(nextCell[0])
+                }
+            }
+        }
+    }
+
+
+    function TabCustomerMainContainer() {
+        //add new customer
+        var $newCustomer = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .add-new-customer");
+        $newCustomer.on({
+            "click": function () {
+                alert("add new customer")
+            }
+        });
+
+
+        //customer-list item click
+        var $customerItem = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer");
+        $customerItem.on({
+            "click": function () {
+                var $this = $(this);
+
+                $customerItem.removeClass("active");
+                $this.addClass("active");
+            }
+        });
+
+
+        //edit customer btn click
+        var $editCustomerBtn = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .actions > .edit");
+        $editCustomerBtn.on({
+            "click": function () {
+                alert("edit customer");
+            }
+        });
+
+
+        //new customer btn click
+        var $newTransactionBtn = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .actions > .new-transaction");
+        $newTransactionBtn.on({
+            "click": function () {
+                alert("new transaction")
+            }
+        });
+
+
+        //customer-list table
+        var $transactionTable = $("body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .body > .transaction-table");
+        $transactionTable.kendoGrid({
+            selectable: 'row',
+            pageable: {
+                refresh: true,
+                pageSizes: true,
+                buttonCount: 5
+            },
+
+            change : function(e){
+                console.log(this.dataItem(this.select()));
+            },
+
+            columns: [
+                {
+                    field: "index",
+                    title: "#",
+                    width: 55,
+                    sortable: false,
+
+
+                    attributes: {
+                        class: "text-align-center",
+                        "data-bind": "html: index"
+                    },
+                    headerAttributes: {
+                        class: "text-align-center"
+                    }
+                },
+                {
+                    field: "chalan",
+                    title: "Chalan",
+                    width: 75,
+                    attributes: {
+                        class: "text-align-center"
+                    },
+                    headerAttributes: {
+                        class: "text-align-center"
+                    }
+                },
+                {
+                    field: "date",
+                    title: "Date",
+                    width: 100,
+                    attributes: {
+                        class: "text-align-center"
+                    },
+                    headerAttributes: {
+                        class: "text-align-center"
+                    }
+                },
+                {
+                    field: "notes",
+                    title: "Notes"
+                },
+                {
+                    field: "work",
+                    title: "",
+                    width: 100,
+                    attributes: {
+                        class: "editable-cell text-align-right"
+                    },
+                    headerAttributes: {
+                        class: "text-align-right"
+                    }
+                },
+                {
+                    field: "amount",
+                    title: "Amount",
+                    width: 80,
+                    attributes: {
+                        class: "editable-cell text-align-right"
+                    },
+                    headerAttributes: {
+                        class: "text-align-right"
+                    }
+                }],
+            dataSource: {
+                pageSize: 25,
+                data: [
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    },
+                    {
+                        "chalan": "1004",
+                        "date": "24/09/1995",
+                        "notes": "hello shubham",
+                        "work": "work/payment",
+                        "amount": "1500"
+                    }
+
+                ],
+                change: function (e) {
+
+                },
+                schema: {
+                    model: {
+                        id: "main",
+                        fields: {
+                            index: {
+                                sortable: false,
+                                validation: {required: true}
+                            }
+                        }
+                    }
+                }
+            },
+
+            dataBound: function () {
+                var rows = this.tbody.children();
+                var dataItems = this.dataSource.view();
+
+
+                for (var i = 0; i < rows.length; i++) {
+                    var row = rows[i];
+                    var data = dataItems[i];
+                    data.index = i + 1;
+
+                    kendo.bind(row, data);
+                }
+
+                this.refocusLastEditedCell();
+            }
+        });
+
+        var gridTransactionTable = $transactionTable.data("kendoGrid");
+
+        $(window).resize(function () {
+            gridTransactionTable.refresh();
+        });
+    }
+
+
+    function initHomeTabs() {
+        var $tabsActions = $("body > .window > .body > .home-container > .header > .tabs > .tab-action");
+        var $tabsContainer = $("body > .window > .body > .home-container > .tab-container");
+        var $tabs = $("body > .window > .body > .home-container > .tab-container > .tab");
+        $tabsActions.on({
+            "click": function () {
+                var $this = $(this);
+                var dataId = $this.attr("data-id");
+
+                $tabsActions.removeClass("active");
+                $this.addClass("active");
+
+                $tabs.removeClass("active");
+                $tabsContainer.find("[data-id='" + dataId + "']").addClass("active");
+            }
+        });
+    }
+
+
+    kendo.ui.Grid.fn.refresh = (function (refresh) {
+        return function (e) {
+            this._refreshing = true;
+
+            refresh.call(this, e);
+
+            this._refreshing = false;
+        }
+    })(kendo.ui.Grid.fn.refresh);
+
+    kendo.ui.Grid.fn.current = (function (current) {
+        return function (element) {
+            // assuming element is td element, i.e. cell selection
+            if (!this._refreshing && element) {
+                this._lastFocusedCellIndex = $(element).index(); // note this might break with grouping cells etc, see grid.cellIndex() method
+                this._lastFocusedUid = $(element).closest("tr").data("uid");
+            }
+
+            return current.call(this, element);
+        }
+    })(kendo.ui.Grid.fn.current);
+
+    kendo.ui.Grid.fn.refocusLastEditedCell = function () {
+        if (this._lastFocusedUid) {
+            var row = $(this.tbody).find("tr[data-uid='" + this._lastFocusedUid + "']");
+            var cell = $(row).children().eq(this._lastFocusedCellIndex);
+            this.editCell(cell);
+        }
+    };
+</script>
+</html>

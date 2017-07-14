@@ -1,0 +1,917 @@
+html {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.01);
+  font-family: Cuprum-Regular;
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+body {
+  padding: 0;
+  background: #EEEEEE none repeat scroll 0 0;
+  border: 1px solid #4527A0;
+  border-radius: 0;
+  box-shadow: 0 1px 6px -1px #3a4b51;
+  box-sizing: border-box;
+  height: calc(100% - 10px);
+  margin: 5px !important;
+  width: calc(100% - 10px);
+  overflow: hidden;
+  font-size: 14px;
+  color: #263238; }
+  body > .window {
+    width: 100%;
+    background: #EEEEEE;
+    height: 100%;
+    float: left; }
+    body > .window > .header {
+      width: 100%;
+      background: #4527A0;
+      height: 40px;
+      -webkit-app-region: drag; }
+      body > .window > .header > .title {
+        color: #ffffff;
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        margin-left: 15px; }
+      body > .window > .header > .actions {
+        float: right;
+        height: 40px;
+        width: auto; }
+        body > .window > .header > .actions > .action {
+          width: 40px;
+          height: 100%;
+          float: left;
+          -webkit-app-region: no-drag; }
+        body > .window > .header > .actions > .close {
+          background: url("../img/app/window/close.png");
+          background-size: cover; }
+        body > .window > .header > .actions > .minimize {
+          background: url("../img/app/window/minimize.png");
+          background-size: cover; }
+        body > .window > .header > .actions > .maximize {
+          background: url("../img/app/window/maximize.png");
+          background-size: cover; }
+        body > .window > .header > .actions > .disable {
+          pointer-events: none;
+          opacity: 0;
+          display: none; }
+    body > .window > .body {
+      width: 100%;
+      height: calc(100% - 40px);
+      float: left;
+      position: relative; }
+      body > .window > .body > .container {
+        width: 100%;
+        height: 100%;
+        position: absolute; }
+      body > .window > .body > .home-container > .header {
+        width: 100%;
+        height: 40px;
+        background: #4527A0; }
+        body > .window > .body > .home-container > .header > .tabs {
+          height: 40px;
+          float: left;
+          color: #ffffff;
+          line-height: 40px;
+          width: auto; }
+          body > .window > .body > .home-container > .header > .tabs > .tab-action {
+            float: left;
+            padding-left: 15px;
+            padding-right: 15px;
+            color: #C9C9C9; }
+          body > .window > .body > .home-container > .header > .tabs > .active {
+            color: #ffffff;
+            border-bottom: 4px solid #EF6C00;
+            box-sizing: border-box;
+            line-height: 36px;
+            transition: all .12s ease-in-out; }
+        body > .window > .body > .home-container > .header > .language {
+          color: #C9C9C9;
+          display: inline-block;
+          float: right;
+          line-height: 40px;
+          margin-right: 15px;
+          width: auto; }
+      body > .window > .body > .home-container > .tab-container {
+        width: 100%;
+        float: left;
+        height: calc(100% - 40px);
+        position: relative; }
+        body > .window > .body > .home-container > .tab-container > .tab {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          display: none;
+          opacity: 0;
+          pointer-events: none; }
+          body > .window > .body > .home-container > .tab-container > .tab > .body {
+            height: 100%;
+            width: 100%;
+            position: relative; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left {
+              width: 300px;
+              float: left;
+              height: 100%;
+              background: #ffffff; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .search {
+                width: 100%;
+                height: 50px;
+                float: left;
+                border-bottom: 1px solid #EEEEEE;
+                box-sizing: border-box; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .search > input {
+                  width: 100%;
+                  height: 100%;
+                  border: none;
+                  padding-left: 10px;
+                  padding-right: 10px; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list {
+                width: 100%;
+                height: calc(100% - 95px);
+                float: left;
+                overflow-y: auto; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer:hover .name {
+                  padding-left: 17px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer:hover {
+                  background: #EEEEEE; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .active {
+                  background: #EEEEEE; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .active > .name {
+                    padding-left: 17px !important;
+                    border-left: 4px solid #EF6C00; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer {
+                  width: 100%;
+                  height: 50px;
+                  display: table;
+                  border-bottom: 1px solid #EEEEEE;
+                  box-sizing: border-box;
+                  position: relative;
+                  transition: all 0.1s linear; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer > .info {
+                    line-height: 50px;
+                    padding-right: 10px;
+                    text-align: right;
+                    color: #7CB342; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer > .info > span {
+                      margin-left: 4px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer > .name {
+                    line-height: 18px;
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-left: 10px;
+                    transition: all 0.1s linear; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer > .name > .party-name {
+                      color: #263238; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .customer-list > .customer > .name > .owner-name {
+                      color: #666666; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .left > .add-new-customer {
+                height: 45px;
+                width: 100%;
+                background: #689F38;
+                float: left;
+                line-height: 45px;
+                color: white;
+                text-align: center; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right {
+              width: calc(100% - 306px);
+              height: 100%;
+              float: left;
+              background: #ffffff;
+              margin-left: 6px;
+              position: relative; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header {
+                width: 100%;
+                height: 85px;
+                border-bottom: 1px solid #EEEEEE;
+                box-sizing: border-box; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top {
+                  height: 50px;
+                  width: 100%;
+                  float: left; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .title {
+                    font-size: 16px;
+                    line-height: 50px;
+                    text-indent: 15px;
+                    float: left; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .title > .sub {
+                      color: #707070; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .actions {
+                    width: auto;
+                    height: 100%;
+                    float: right; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .actions > .btn {
+                      background: white;
+                      float: left;
+                      margin-right: 5px;
+                      margin-top: 5px;
+                      box-sizing: border-box;
+                      cursor: pointer; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .actions > .edit {
+                      border: 1px solid #4527A0;
+                      color: #4527A0; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .top > .actions > .new-transaction {
+                      background: #689F38;
+                      color: #ffffff; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info {
+                  width: 100%;
+                  float: left;
+                  height: 20px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info > .status {
+                    width: auto;
+                    height: 100%;
+                    line-height: 20px;
+                    text-indent: 15px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info > .status > .open {
+                      color: #7CB342; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info > .status > .out-of-date {
+                      color: #E53935; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info > .status > div {
+                      float: left;
+                      width: auto; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info > .status > div > i {
+                        text-indent: 0; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .header > .info > .status > div > span {
+                        margin-left: 3px; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .body {
+                width: 100%;
+                height: calc(100% - 85px);
+                float: left;
+                position: relative; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-main > .right > .body > .transaction-table {
+                  width: calc(100% - 10px);
+                  height: calc(100% - 10px);
+                  margin-left: 5px;
+                  margin-top: 5px; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer {
+              width: 100%;
+              height: 100%;
+              background: rgba(7, 7, 7, 0.6);
+              pointer-events: none;
+              display: none;
+              opacity: 0;
+              position: relative; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box {
+                width: 400px;
+                margin-left: auto;
+                margin-right: auto;
+                height: auto;
+                margin-top: 100px;
+                border-radius: 2px;
+                position: relative;
+                overflow: hidden; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .header {
+                  width: 100%;
+                  height: 40px;
+                  float: left;
+                  background: #424242;
+                  line-height: 40px;
+                  color: #ffffff;
+                  text-indent: 15px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body {
+                  width: 100%;
+                  float: left;
+                  background: #EEEEEE; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body > .form {
+                    width: calc(100% - 30px);
+                    height: auto;
+                    float: left;
+                    position: relative;
+                    margin-left: 15px;
+                    margin-top: 8px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body > .form > table {
+                      width: 100%;
+                      border-collapse: collapse; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body > .form > table > tbody tr {
+                        border-bottom: 10px solid transparent; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body > .form > table > tbody tr > td:nth-child(2) {
+                          padding-left: 15px; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body > .form > table > tbody tr > td > textarea {
+                          outline: none;
+                          resize: none;
+                          width: 220px;
+                          height: 44px;
+                          border: 1px solid #e0e0e0;
+                          border-radius: 2px;
+                          padding-left: 15px;
+                          padding-right: 15px;
+                          padding-top: 8px;
+                          padding-top: 8px;
+                          font-family: Cuprum-Regular;
+                          font-size: 14px; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .body > .form > table > tbody tr > td > input {
+                          width: 250px;
+                          height: 35px;
+                          font-size: 14px;
+                          font-family: Cuprum-Regular;
+                          padding-left: 15px;
+                          padding-right: 15px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .actions {
+                  float: left;
+                  background: #EEEEEE;
+                  height: 40px;
+                  width: 100%; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .actions > .list {
+                    height: 35px;
+                    float: right;
+                    margin-right: 5px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .actions > .list > .btn {
+                      padding-left: 25px;
+                      padding-right: 25px;
+                      cursor: pointer; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .actions > .list > .cancel {
+                      background: #D32F2F;
+                      color: white;
+                      margin-right: 5px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-add-customer > .box > .actions > .list > .save {
+                      color: white;
+                      background: #689F38; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction {
+              background: #EEEEEE; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .top {
+                width: 100%;
+                height: 47px;
+                line-height: 47px;
+                float: left; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .top > .title {
+                  height: 47px;
+                  width: auto;
+                  float: left;
+                  text-indent: 5px;
+                  font-size: 16px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .top > .actions {
+                  float: right;
+                  height: 35px;
+                  margin-right: 5px;
+                  margin-top: 5px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .top > .actions > .btn {
+                    padding-left: 25px;
+                    padding-right: 25px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .top > .actions > .cancel {
+                    background: #D32F2F;
+                    color: white;
+                    margin-right: 5px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .top > .actions > .save {
+                    background: #689F38;
+                    color: white; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body {
+                width: 100%;
+                height: calc(100% - 47px);
+                float: left;
+                overflow: auto;
+                position: relative; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info {
+                  width: calc(100% - 10px);
+                  margin-left: 5px;
+                  float: left;
+                  height: 50px;
+                  background: white;
+                  /* kendo ui auto complete*/ }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > input {
+                    height: 35px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .party-name {
+                    width: 225px;
+                    margin-top: 7px;
+                    height: 35px;
+                    margin-left: 14px;
+                    float: left; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .k-autocomplete {
+                    border-radius: 2px;
+                    box-shadow: none;
+                    border: medium none;
+                    box-sizing: border-box; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .k-autocomplete > input {
+                      border: 1px solid #e3e3e3;
+                      box-sizing: border-box;
+                      height: 100%;
+                      width: 100%; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .chalan-container {
+                    height: 50px;
+                    float: left;
+                    line-height: 50px;
+                    margin-left: 21px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .chalan-container > span {
+                      float: left; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .chalan-container > .chalan-no {
+                      float: left;
+                      width: 65px;
+                      height: 35px;
+                      text-align: center;
+                      margin-top: 7px;
+                      margin-left: 7px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .date-container {
+                    height: 50px;
+                    float: left;
+                    line-height: 50px;
+                    margin-left: 21px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .date-container > span {
+                      float: left; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .info > .date-container > .k-datepicker {
+                      margin-top: 7px;
+                      margin-left: 7px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container {
+                  width: calc(100% - 10px);
+                  margin-left: 5px;
+                  margin-top: 5px;
+                  margin-bottom: 5px;
+                  background: #ffffff;
+                  height: auto;
+                  float: left;
+                  /* for kendo ui grid*/ }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .title {
+                    width: 100%;
+                    height: 50px;
+                    float: left;
+                    line-height: 50px;
+                    text-indent: 14px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .my-grid {
+                    overflow: hidden; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container .no-scroll .k-grid-header {
+                    padding-right: 0 !important; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container .no-scroll .k-grid-content {
+                    overflow-y: auto !important; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .product-list-table {
+                    width: calc(100% - 28px);
+                    height: auto;
+                    margin-left: 14px;
+                    float: left;
+                    position: relative;
+                    border-radius: 2px;
+                    border: 1px solid #E0E0E0; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container {
+                    width: calc(100% - 28px);
+                    margin-left: 14px;
+                    float: left;
+                    height: auto; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .notes {
+                      float: left;
+                      margin-top: 15px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .notes > span {
+                        float: left;
+                        margin-top: 5px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .notes > textarea {
+                        float: left;
+                        resize: none;
+                        width: 250px;
+                        height: 60px;
+                        margin-left: 15px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals {
+                      float: right; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals > table > tbody > tr {
+                        height: 45px; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals > table > tbody > tr > td {
+                          text-align: right;
+                          padding-left: 30px;
+                          padding-right: 10px; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals > table > tbody > tr > td:nth-child(2) {
+                          min-width: 60px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals > table > tbody > tr:nth-child(2) > td > .type {
+                        width: 175px;
+                        text-align: left; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-new-transaction > .body > .product-list-container > .total-container > .totals > table > tbody > tr:nth-child(2) > td > .value {
+                        width: 55px;
+                        text-align: center; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top {
+              width: 100%;
+              height: 47px;
+              line-height: 47px;
+              float: left; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .title {
+                height: 47px;
+                width: auto;
+                float: left;
+                text-indent: 5px;
+                font-size: 16px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .title > .chalan {
+                  color: #707070; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .title > .party-name {
+                  color: #707070; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .actions {
+                float: right;
+                height: 35px;
+                margin-right: 5px;
+                margin-top: 5px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .actions > .btn {
+                  padding-left: 25px;
+                  padding-right: 25px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .actions > .cancel {
+                  background: #D32F2F;
+                  color: white;
+                  margin-right: 5px; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .top > .actions > .save {
+                  background: #689F38;
+                  color: white; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body {
+              float: left;
+              width: 100%;
+              height: calc(100% - 47px);
+              overflow-y: auto; }
+              body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container {
+                height: auto;
+                background: white;
+                width: calc(100% - 10px);
+                margin-left: 5px;
+                box-sizing: border-box;
+                border: 1px solid #CCCCCC;
+                border-radius: 2px;
+                box-shadow: 0 0 5px -4px;
+                margin-top: 5px;
+                float: left;
+                overflow: hidden; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work {
+                  width: 100%;
+                  height: 100px;
+                  border-bottom: 1px solid #e3e3e3;
+                  float: left; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .top {
+                    height: 34px;
+                    width: 100%;
+                    float: left;
+                    line-height: 34px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .top > .title {
+                      float: left;
+                      margin-left: 10px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .top > .info {
+                      float: right;
+                      margin-right: 10px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content {
+                    width: calc(100% - 20px);
+                    margin-left: 10px;
+                    height: 35px;
+                    float: left;
+                    margin-top: 15.5px;
+                    line-height: 35px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .container {
+                      margin-left: 20px;
+                      float: left;
+                      height: 35px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .container > .title {
+                        float: left; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .container > .input {
+                        box-sizing: border-box;
+                        float: left;
+                        margin-left: 5px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .container:first-child {
+                      margin-left: 0; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .work-container > .input {
+                      width: 170px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .date-container > .input {
+                      width: 135px;
+                      text-align: center; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .short-container > .input {
+                      width: 50px;
+                      text-align: center; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .plain-container > .input {
+                      width: 50px;
+                      text-align: center; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .ready-container {
+                      float: right; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .work > .content > .ready-container > .input {
+                        width: 75px;
+                        text-align: center; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container {
+                  width: 100%;
+                  height: 60px;
+                  float: left;
+                  border-bottom: 1px solid #e3e3e3; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content {
+                    width: calc(100% - 20px);
+                    margin-left: 10px;
+                    height: 35px;
+                    float: left;
+                    margin-top: 12.5px;
+                    position: relative; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container {
+                      position: relative;
+                      height: 100%;
+                      display: inline-block; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .item:first-child {
+                        margin-left: 0; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .item {
+                        display: inline-block;
+                        height: 35px;
+                        line-height: 35px;
+                        margin-left: 20px; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .item > .title {
+                          float: left; }
+                        body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .item > .input {
+                          float: left;
+                          margin-left: 5px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .net-container > .input {
+                        width: 100px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .estimate-amount > .input {
+                        width: 75px;
+                        text-align: center; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .info-container > .content > .container > .chalan-container > .input {
+                        width: 75px;
+                        text-align: center; }
+                body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container {
+                  height: 100px;
+                  width: 100%;
+                  float: left; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .top {
+                    height: 34px;
+                    width: 100%;
+                    float: left;
+                    line-height: 34px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .top > .title {
+                      float: left;
+                      margin-left: 10px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .top > .info {
+                      float: right;
+                      margin-right: 10px; }
+                  body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content {
+                    width: calc(100% - 20px);
+                    margin-left: 10px;
+                    height: 35px;
+                    float: left;
+                    margin-top: 15.5px;
+                    line-height: 35px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .container {
+                      margin-left: 20px;
+                      float: left;
+                      height: 35px; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .container > .title {
+                        float: left; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .container > .input {
+                        float: left;
+                        margin-left: 5px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .container:first-child {
+                      margin-left: 0; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .payment-type-container > .input {
+                      width: 100px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .date-container > .input {
+                      width: 135px;
+                      text-align: center; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .account-container > .input {
+                      width: 190px; }
+                    body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .amount-container {
+                      float: right; }
+                      body > .window > .body > .home-container > .tab-container > .tab > .body > .container-work-payment > .body > .work-payment-container > .payment-container > .content > .amount-container > .input {
+                        width: 75px;
+                        text-align: center; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .container {
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              display: none;
+              opacity: 0;
+              pointer-events: none;
+              z-index: 1; }
+            body > .window > .body > .home-container > .tab-container > .tab > .body > .active {
+              z-index: 2;
+              display: block;
+              opacity: 1;
+              pointer-events: auto; }
+        body > .window > .body > .home-container > .tab-container > .active {
+          display: block;
+          opacity: 1;
+          pointer-events: auto; }
+
+textarea {
+  padding: 5px; }
+
+input:focus, textarea:focus {
+  border: 1px solid #EF6C00 !important; }
+
+input, textarea {
+  font-family: Cuprum-Regular;
+  font-size: 14px;
+  outline: none;
+  border: 1px solid #e3e3e3;
+  padding-left: 5px;
+  padding-right: 5px;
+  box-sizing: border-box;
+  color: #263238;
+  transition: all 0.2s;
+  border-radius: 2px; }
+
+.btn {
+  height: 35px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: white;
+  float: left;
+  border-radius: 2px;
+  line-height: 35px;
+  transition: box-shadow .2s ease-in-out; }
+
+.btn:hover {
+  box-shadow: 0 3px 8px -2px #000000; }
+
+@font-face {
+  font-family: 'Cuprum-Regular';
+  src: url("../font/cuprum/Cuprum-Regular.ttf"); }
+@font-face {
+  font-family: 'Cuprum-Bold';
+  src: url("../font/cuprum/Cuprum-Bold.ttf"); }
+@font-face {
+  font-family: 'Cuprum-BoldItalic';
+  src: url("../font/cuprum/Cuprum-BoldItalic.ttf"); }
+@font-face {
+  font-family: 'Cuprum-Italic';
+  src: url("../font/cuprum/Cuprum-Italic.ttf"); }
+input[type='text'] {
+  height: 35px;
+  outline: none; }
+
+::-webkit-scrollbar {
+  width: 5px;
+  position: absolute;
+  background: transparent; }
+
+::-webkit-scrollbar-button {
+  /* 2 */ }
+
+::-webkit-scrollbar-track {
+  /* 3 */ }
+
+::-webkit-scrollbar-track-piece {
+  /* 4 */ }
+
+::-webkit-scrollbar-thumb {
+  /* 5 */
+  width: 5px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4); }
+
+::-webkit-scrollbar-corner {
+  /* 6 */ }
+
+::-webkit-resizer {
+  /* 7 */ }
+
+/*default class*/
+.no-margin {
+  margin: 0 !important; }
+
+.no-margin-left {
+  margin-left: 0 !important; }
+
+.no-margin-right {
+  margin-right: 0 !important; }
+
+.no-margin-top {
+  margin-top: 0 !important; }
+
+.no-margin-bottom {
+  margin-bottom: 0 !important; }
+
+.no-padding {
+  padding: 0 !important; }
+
+.no-padding-left {
+  padding-left: 0 !important; }
+
+.no-padding-right {
+  padding-right: 0 !important; }
+
+.no-padding-top {
+  padding-top: 0 !important; }
+
+.no-padding-bottom {
+  padding-bottom: 0 !important; }
+
+.text-align-right {
+  text-align: right !important; }
+
+.text-align-left {
+  text-align: left !important; }
+
+.text-align-center {
+  text-align: center !important; }
+
+/* kendo ui dropdown*/
+.k-dropdown {
+  background: white none repeat scroll 0 0 !important;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 35px; }
+  .k-dropdown > .k-state-focused {
+    border: 1px solid #4527A0 !important; }
+  .k-dropdown > .k-dropdown-wrap {
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    box-shadow: none; }
+    .k-dropdown > .k-dropdown-wrap > .k-input {
+      height: 100%;
+      line-height: 35px;
+      margin: 0;
+      padding: 0; }
+    .k-dropdown > .k-dropdown-wrap > .k-select {
+      line-height: 32px; }
+
+.k-list > .k-state-selected {
+  color: #fff;
+  background-color: #4527A0;
+  border-color: #4527A0; }
+
+/*kendo ui grid*/
+.my-grid .k-state-focused {
+  box-shadow: none; }
+.my-grid td, .my-grid tr {
+  padding-left: 10px;
+  padding-right: 10px;
+  text-indent: 0; }
+.my-grid > .k-grid-header table > thead > tr {
+  height: 45px; }
+  .my-grid > .k-grid-header table > thead > tr > th {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 45px;
+    color: #ffffff !important;
+    background: #757575 !important; }
+    .my-grid > .k-grid-header table > thead > tr > th > a {
+      color: #ffffff;
+      height: 45px;
+      line-height: 45px;
+      padding: 0;
+      margin: 0; }
+      .my-grid > .k-grid-header table > thead > tr > th > a > span {
+        color: #ffffff; }
+.my-grid > .k-grid-content {
+  height: calc(100% - 45px); }
+  .my-grid > .k-grid-content table tbody tr > .border {
+    border-bottom: 1px solid #e0e0e0; }
+  .my-grid > .k-grid-content table tbody tr > td {
+    border-bottom: 1px solid #e0e0e0;
+    box-sizing: border-box;
+    height: 41px;
+    position: relative; }
+  .my-grid > .k-grid-content table tbody tr > .k-edit-cell {
+    padding: 0; }
+    .my-grid > .k-grid-content table tbody tr > .k-edit-cell > input {
+      text-indent: 0;
+      padding-left: 9px;
+      padding-right: 9px;
+      width: 100%;
+      height: 40px !important;
+      box-sizing: border-box;
+      border: 1px solid transparent;
+      text-align: inherit;
+      border-radius: 2px; }
+
+/*kendo ui date picker*/
+.k-datepicker {
+  float: left;
+  height: 35px;
+  text-align: center;
+  width: 135px;
+  border-radius: 2px;
+  box-sizing: border-box; }
+  .k-datepicker > .k-state-focused {
+    border: 1px solid #EF6C00 !important; }
+  .k-datepicker > .k-picker-wrap {
+    border: 1px solid #e3e3e3;
+    background: white none repeat scroll 0 0;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 35px;
+    box-shadow: none; }
+    .k-datepicker > .k-picker-wrap > .k-input:focus {
+      border: none !important; }
+    .k-datepicker > .k-picker-wrap > .k-input {
+      border-radius: 2px;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      border: none; }
+    .k-datepicker > .k-picker-wrap > .k-select {
+      box-sizing: border-box;
+      line-height: 31px;
+      border-color: #e3e3e3; }
+      .k-datepicker > .k-picker-wrap > .k-select > .k-icon {
+        box-sizing: border-box; }
+
+/*kendo ui autocomplet*/
+.k-autocomplete {
+  background: white none repeat scroll 0 0;
+  border: medium none;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  height: 100%; }
+  .k-autocomplete > .k-input {
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    width: 100%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,30 @@
+{
+  "name": "Shubham",
+  "version": "1.0.0",
+  "description": "",
+  "main": "http://127.0.0.1:4545/index.html",
+  "node-remote" : "http://127.0.0.1:4545",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "window": {
+    "title": "Shubham",
+    "toolbar": false,
+    "frame": false,
+    "showDevTools":false,
+    "show": true,
+    "focus": true,
+    "width": 1280,
+    "height": 650,
+    "min_width": 1000,
+    "min_height": 600,
+    "transparent": true,
+    "resizable": true,
+    "single-instance": true
+  },
+  "license": "ISC",
+  "dependencies": {
+
+  }
+}

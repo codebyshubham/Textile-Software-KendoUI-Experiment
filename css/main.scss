@@ -1,0 +1,1486 @@
+$color-blue-main: #4527A0;
+$color-white-dull: #EEEEEE;
+$color-black-main: #263238;
+$color-black-main-sub: #666666;
+$color-black-header : #424242;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-orange: #EF6C00;
+$color-border: #E0E0E0;
+$color-green-text: #7CB342;
+$color-red-text: #E53935;
+$color-green-back: #689F38;
+$color-red-back: #D32F2F;
+
+$btn-height: 35px;
+$btn-padding: 20px;
+$btn-radius: 2px;
+
+$radius : 2px;
+
+html {
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.01);
+  font-family: Cuprum-Regular;
+  cursor: default;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+body {
+  padding: 0;
+  background: $color-white-dull none repeat scroll 0 0;
+  border: 1px solid $color-blue-main;
+  border-radius: 0;
+  box-shadow: 0 1px 6px -1px #3a4b51;
+  box-sizing: border-box;
+  height: calc(100% - 10px);
+  margin: 5px !important;
+  width: calc(100% - 10px);
+  overflow: hidden;
+  font-size: 14px;
+  color: $color-black-main;
+
+  > .window {
+
+    $header-height: 40px;
+
+    width: 100%;
+    background: $color-white-dull;
+    height: 100%;
+    float: left;
+
+    > .header {
+      width: 100%;
+      background: $color-blue-main;
+      height: $header-height;
+      -webkit-app-region: drag;
+
+      > .title {
+        color: $color-white;
+        float: left;
+        height: $header-height;
+        line-height: $header-height;
+        margin-left: 15px;
+
+      }
+
+      > .actions {
+        float: right;
+        height: $header-height;
+        width: auto;
+
+        > .action {
+          width: $header-height;
+          height: 100%;
+          float: left;
+          -webkit-app-region: no-drag;
+        }
+
+        > .close {
+          background: url("../img/app/window/close.png");
+          background-size: cover;
+        }
+        > .minimize {
+          background: url("../img/app/window/minimize.png");
+          background-size: cover;
+        }
+        > .maximize {
+          background: url("../img/app/window/maximize.png");
+          background-size: cover;
+        }
+        > .disable {
+          pointer-events: none;
+          opacity: 0;
+          display: none;
+        }
+      }
+    }
+
+    > .body {
+      width: 100%;
+      height: calc(100% - #{$header-height});
+      float: left;
+      position: relative;
+
+      > .container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+      }
+
+      > .home-container {
+
+        $header-height: 40px;
+        > .header {
+          width: 100%;
+          height: $header-height;
+          background: $color-blue-main;
+
+          > .tabs {
+            height: $header-height;
+            float: left;
+            color: $color-white;
+            line-height: $header-height;
+            width: auto;
+
+            > .tab-action {
+              float: left;
+              padding-left: 15px;
+              padding-right: 15px;
+              color: #C9C9C9;
+            }
+
+            $border-height: 4px;
+            > .active {
+              color: $color-white;
+              border-bottom: $border-height solid $color-orange;
+              box-sizing: border-box;
+              line-height: $header-height - $border-height;
+              transition: all .12s ease-in-out;
+            }
+          }
+
+          > .language {
+            color: #C9C9C9;
+            display: inline-block;
+            float: right;
+            line-height: 40px;
+            margin-right: 15px;
+            width: auto;
+          }
+        }
+
+        > .tab-container {
+          width: 100%;
+          float: left;
+          height: calc(100% - #{$header-height});
+          position: relative;
+
+          > .tab {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            display: none;
+            opacity: 0;
+            pointer-events: none;
+
+            > .body {
+              height: 100%;
+              width: 100%;
+              position: relative;
+
+              > .container-main {
+                $left-width: 300px;
+
+                > .left {
+                  width: $left-width;
+                  float: left;
+                  height: 100%;
+                  background: $color-white;
+
+                  $search-height: 50px;
+                  $btn-add-customer-height : 45px;
+
+
+                  > .search {
+                    width: 100%;
+                    height: $search-height;
+                    float: left;
+                    border-bottom: 1px solid $color-white-dull;
+                    box-sizing: border-box;
+                    > input {
+                      width: 100%;
+                      height: 100%;
+                      border: none;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                    }
+                  }
+
+                  > .customer-list {
+                    width: 100%;
+                    height: calc(100% - #{$search-height + $btn-add-customer-height});
+                    float: left;
+                    overflow-y : auto;
+
+
+                    $customer-item-hover-transition : all .1s linear;
+
+                    >.customer:hover  .name{
+                      padding-left: 17px;
+                    }
+                    >.customer:hover{
+                      background: $color-white-dull;
+                    }
+
+
+                    >.active{
+                      background: $color-white-dull;
+
+                      >.name{
+                        padding-left: 17px !important;
+                        border-left: 4px solid $color-orange;
+                      }
+
+                    }
+
+                    > .customer {
+                      width: 100%;
+                      height: 50px;
+                      display: table;
+                      border-bottom: 1px solid $color-white-dull;
+                      box-sizing: border-box;
+                      position: relative;
+                      transition: $customer-item-hover-transition;
+
+                      > .info {
+                        line-height: 50px;
+                        padding-right: 10px;
+                        text-align: right;
+                        color: $color-green-text;
+
+                        >span{
+                          margin-left: 4px;
+                        }
+                      }
+                      > .name {
+                        line-height: 18px;
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding-left: 10px;
+                        transition: $customer-item-hover-transition;
+
+                        > .party-name {
+                          color: $color-black-main;
+                        }
+                        > .owner-name {
+                          color: $color-black-main-sub;
+                        }
+                      }
+                    }
+                  }
+
+                  >.add-new-customer{
+                    height: $btn-add-customer-height;
+                    width: 100%;
+                    background: $color-green-back;
+                    float: left;
+                    line-height: $btn-add-customer-height;
+                    color: white;
+                    text-align: center;
+                  }
+                }
+                $gap: 6px;
+                > .right {
+                  width: calc(100% - #{$left-width + $gap});
+                  height: 100%;
+                  float: left;
+                  background: $color-white;
+                  margin-left: $gap;
+                  position: relative;
+
+                  $header-top-height: 50px;
+                  $header-info-height: 20px;
+                  $header-padding-bottom: 15px;
+
+                  > .header {
+                    width: 100%;
+                    height: $header-top-height + $header-info-height + $header-padding-bottom;
+                    border-bottom: 1px solid $color-white-dull;
+                    box-sizing: border-box;
+
+                    $header-top-height: 50px;
+
+                    > .top {
+                      height: $header-top-height;
+                      width: 100%;
+                      float: left;
+
+                      > .title {
+                        font-size: 16px;
+                        line-height: $header-top-height;
+                        text-indent: 15px;
+                        float: left;
+
+                        > .sub {
+                          color: #707070;
+                        }
+                      }
+                      > .actions {
+                        width: auto;
+                        height: 100%;
+                        float: right;
+
+                        > .btn {
+                          background: white;
+                          float: left;
+                          margin-right: 5px;
+                          margin-top: 5px;
+                          box-sizing: border-box;
+                          cursor: pointer;
+                        }
+
+                        > .edit {
+                          border: 1px solid $color-blue-main;
+                          color: $color-blue-main;
+                        }
+
+                        > .new-transaction {
+                          background: $color-green-back;
+                          color: $color-white;
+                        }
+                      }
+                    }
+
+                    > .info {
+                      width: 100%;
+                      float: left;
+                      height: $header-info-height;
+
+                      > .status {
+                        width: auto;
+                        height: 100%;
+                        line-height: $header-info-height;
+                        text-indent: 15px;
+
+                        > .open {
+                          color: $color-green-text;
+                        }
+
+                        > .out-of-date {
+                          color: $color-red-text;
+                        }
+
+                        > div {
+                          float: left;
+                          width: auto;
+
+                          > i {
+                            text-indent: 0;
+                          }
+
+                          > span {
+                            margin-left: 3px;
+                          }
+                        }
+                      }
+                    }
+                  }
+
+                  > .body {
+                    width: 100%;
+                    height: calc(100% - #{$header-info-height + $header-padding-bottom + $header-top-height});
+                    float: left;
+                    position: relative;
+
+                    $table-padding: 5px;
+                    > .transaction-table {
+                      width: calc(100% - #{$table-padding * 2});
+                      height: calc(100% - #{$table-padding * 2});
+                      margin-left: $table-padding;
+                      margin-top: $table-padding;
+                    }
+
+                  }
+                }
+              }
+
+
+              >.container-add-customer{
+                width: 100%;
+                height: 100%;
+                background: rgba(7,7,7,.6);
+
+
+                pointer-events: none;
+                display: none;
+                opacity: 0;
+                position: relative;
+
+                >.box{
+                  width: 400px;
+                  margin-left: auto;
+                  margin-right: auto;
+                  height: auto;
+
+                  margin-top: 100px;
+                  border-radius: $radius;
+                  position: relative;
+                  overflow: hidden;
+
+                  $header-height : 40px;
+
+                  >.header{
+                    width: 100%;
+                    height: $header-height;
+                    float: left;
+                    background: $color-black-header;
+                    line-height: $header-height;
+                    color: $color-white;
+                    text-indent: 15px;
+                  }
+
+                  >.body{
+                    width: 100%;
+                    float: left;
+                    background: $color-white-dull;
+
+
+
+                    $form-padding-left : 15px;
+                    $form-padding-top : 8px;
+
+                    >.form{
+                      width: calc(100% - #{$form-padding-left * 2});
+                      height: auto;
+                      float: left;
+                      position: relative;
+                      margin-left: $form-padding-left;
+                      margin-top: $form-padding-top;
+
+                      >table{
+                        width: 100%;
+                        border-collapse: collapse;
+
+                        >tbody{
+                          tr{
+                            border-bottom:10px solid transparent;
+
+                            >td:nth-child(2){
+                              padding-left: 15px;
+                            }
+
+                            >td{
+                              >textarea{
+                                outline: none;
+                                resize: none;
+                                width: 250px - ($form-padding-left*2);
+                                height: 60px - ($form-padding-top * 2);
+                                border: 1px solid #e0e0e0;
+                                border-radius: 2px;
+                                padding-left: $form-padding-left;
+                                padding-right: $form-padding-left;
+                                padding-top: $form-padding-top;
+                                padding-top: $form-padding-top;
+                                font-family: Cuprum-Regular;
+                                font-size: 14px;
+                              }
+
+                              >input{
+                                width: 250px;
+                                height: 35px;
+                                font-size: 14px;
+                                font-family: Cuprum-Regular;
+                                padding-left: $form-padding-left;
+                                padding-right: $form-padding-left;
+                              }
+                            }
+                          }
+
+                        }
+
+                      }
+                    }
+                  }
+                  >.actions{
+                    float: left;
+                    background: $color-white-dull;
+                    height: 40px;
+                    width: 100%;
+
+                    >.list{
+                      height: 35px;
+                      float: right;
+                      margin-right: 5px;
+
+                      >.btn{
+                        padding-left: 25px;
+                        padding-right: 25px;
+                        cursor: pointer;
+                      }
+
+                      >.cancel{
+                        background: $color-red-back;
+                        color: white;
+                        margin-right: 5px;
+                      }
+
+                      >.save{
+                        color: white;
+                        background: $color-green-back;
+                      }
+                    }
+                  }
+                }
+              }
+
+
+              >.container-new-transaction{
+                background: $color-white-dull;
+
+
+
+                $side-padding : 5px;
+                $inner-side-padding : $side-padding + 2px;
+
+                $top-height : 35px + $side-padding * 2 + 2px;
+
+                >.top{
+                  width: 100%;
+                  height: $top-height;
+                  line-height: $top-height;
+                  float: left;
+
+                  >.title{
+                    height: $top-height;
+                    width: auto;
+                    float: left;
+                    text-indent: $side-padding;
+                    font-size: 16px;
+                  }
+
+                  >.actions{
+                    float: right;
+                    height: 35px;
+                    margin-right: $side-padding;
+                    margin-top: $side-padding;
+
+                    >.btn{
+                      padding-left: 25px;
+                      padding-right: 25px;
+                    }
+
+                    >.cancel{
+                      background: $color-red-back;
+                      color: white;
+                      margin-right: $side-padding;
+                    }
+                    >.save{
+                      background: $color-green-back;
+                      color: white;
+                    }
+                  }
+                }
+
+                >.body{
+                  width: 100%;
+                  height: calc(100% - #{$top-height});
+                  float: left;
+                  overflow: auto;
+                  position: relative;
+
+                  $info-height : 50px;
+
+                  >.info{
+                    width: calc(100% - #{$side-padding * 2});
+                    margin-left: $side-padding;
+                    float: left;
+                    height: $info-height;
+                    background: white;
+
+                    >input{
+                      height: 35px;
+                    }
+
+
+                    >.party-name{
+                      width: 225px;
+                      margin-top: $inner-side-padding;
+                      height: 35px;
+                      margin-left: $inner-side-padding * 2;
+                      float: left;
+                    }
+
+                    /* kendo ui auto complete*/
+                    >.k-autocomplete{
+                      border-radius: 2px;
+                      box-shadow: none;
+                      border: medium none;
+                      box-sizing: border-box;
+
+                      >input{
+                        border: 1px solid #e3e3e3 ;
+                        box-sizing: border-box;
+                        height: 100%;
+                        width: 100%;
+                      }
+                    }
+
+
+
+
+
+
+
+
+
+
+                    >.chalan-container{
+                      height: $info-height;
+                      float: left;
+                      line-height:$info-height ;
+                      margin-left: $inner-side-padding * 3;
+
+                      >span{
+                        float: left;
+                      }
+                      >.chalan-no{
+                        float: left;
+                        width: 65px;
+                        height: 35px;
+                        text-align: center;
+                        margin-top: $inner-side-padding;
+                        margin-left: $inner-side-padding;
+                      }
+                    }
+
+                    >.date-container{
+                      height: $info-height;
+                      float: left;
+                      line-height:$info-height ;
+                      margin-left: $inner-side-padding * 3;
+
+                      >span{
+                        float: left;
+                      }
+
+                      >.k-datepicker{
+
+                        margin-top: $inner-side-padding;
+                        margin-left: $inner-side-padding;
+                      }
+
+
+                    }
+                  }
+                  >.product-list-container{
+                    width: calc(100% - #{$side-padding * 2});
+                    margin-left: $side-padding;
+                    margin-top: $side-padding;
+                    margin-bottom: $side-padding;
+                    background: $color-white;
+                    height: auto;
+                    float: left;
+
+
+                    $title-height : 50px;
+                    >.title{
+                      width:100%;
+                      height: $title-height;
+                      float: left;
+                      line-height: $title-height;
+                      text-indent: $inner-side-padding * 2;
+                    }
+
+
+
+
+                    /* for kendo ui grid*/
+                    >.my-grid{
+                      overflow: hidden;
+                    }
+
+                    .no-scroll{
+                      .k-grid-header{
+                        padding-right: 0 !important;
+                      }
+                      .k-grid-content{
+                        overflow-y: auto !important;
+                      }
+                    }
+
+                    >.product-list-table{
+                      width: calc(100% - #{$inner-side-padding * 4});
+                      height: auto;
+                      margin-left: $inner-side-padding*2;
+                      float: left;
+
+
+                      position: relative;
+                      border-radius: 2px;
+                      border: 1px solid #E0E0E0;
+
+
+                    }
+
+
+                    >.total-container{
+                      width: calc(100% - #{$inner-side-padding * 4});
+                      margin-left: $inner-side-padding*2;
+                      float: left;
+                      height: auto;
+
+                      >.notes{
+                        float: left;
+                        margin-top: 15px;
+
+                        >span{
+                          float: left;
+                          margin-top: 5px;
+                        }
+                        >textarea{
+                          float: left;
+                          resize: none;
+                          width: 250px;
+                          height: 60px;
+                          margin-left: 15px;
+                        }
+                      }
+
+                      >.totals{
+                        float: right;
+
+                        >table{
+                          >tbody{
+                            >tr{
+                              height: 45px;
+                              >td{
+                                text-align: right;
+                                padding-left: 30px;
+                                padding-right: 10px;
+                              }
+
+                              >td:nth-child(2){
+                                min-width: 60px;
+                              }
+                            }
+
+                            >tr:nth-child(2){
+                              >td{
+                                >.type{
+                                  width: 175px;
+                                  text-align: left;
+                                }
+                                >.value{
+                                  width: 55px;
+                                  text-align: center;
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+
+
+
+              >.container-work-payment{
+                $side-padding : 5px;
+                $inner-side-padding : $side-padding + 2px;
+
+                $top-height : 35px + $side-padding * 2 + 2px;
+
+                >.top{
+                  width: 100%;
+                  height: $top-height;
+                  line-height: $top-height;
+                  float: left;
+
+                  >.title{
+                    height: $top-height;
+                    width: auto;
+                    float: left;
+                    text-indent: $side-padding;
+                    font-size: 16px;
+
+                    >.chalan{
+                      color: #707070;
+                    }
+
+                    >.party-name{
+                      color: #707070;
+                    }
+
+                  }
+
+                  >.actions{
+                    float: right;
+                    height: 35px;
+                    margin-right: $side-padding;
+                    margin-top: $side-padding;
+
+                    >.btn{
+                      padding-left: 25px;
+                      padding-right: 25px;
+                    }
+
+                    >.cancel{
+                      background: $color-red-back;
+                      color: white;
+                      margin-right: $side-padding;
+                    }
+                    >.save{
+                      background: $color-green-back;
+                      color: white;
+                    }
+                  }
+                }
+
+                >.body{
+                  float: left;
+                  width: 100%;
+                  height: calc(100% - #{$top-height});
+                  overflow-y: auto;
+
+
+                  >.work-payment-container{
+                    height: auto;
+                    background: white;
+                    width: calc(100% - #{$side-padding * 2});
+                    margin-left: $side-padding;
+                    box-sizing: border-box;
+                    border: 1px solid #CCCCCC;
+                    border-radius: 2px;
+                    box-shadow: 0 0 5px -4px;
+                    margin-top: 5px;
+                    float: left;
+                    overflow: hidden;
+
+
+                    $work-height : 100px;
+                    $info-height : 60px;
+                    $payment-height : $work-height;
+
+                    >.work{
+                      width: 100%;
+                      height: $work-height;
+                      border-bottom: 1px solid #e3e3e3;
+                      float: left;
+
+                      $top-height : 34px;
+                      $inner-side-padding : 10px;
+
+                      >.top{
+                        height: $top-height;
+                        width: 100%;
+                        float: left;
+                        line-height: $top-height;
+
+                        >.title{
+                          float: left;
+                          margin-left: $inner-side-padding;
+                        }
+                        >.info{
+                          float: right;
+                          margin-right: $inner-side-padding;
+                        }
+                      }
+
+                      $content-height : 35px;
+                      >.content{
+                        width: calc(100% - #{$inner-side-padding * 2});
+                        margin-left: $inner-side-padding;
+                        height: $content-height;
+                        float: left;
+                        margin-top: ($work-height - $top-height - $content-height)/2;
+                        line-height: $content-height;
+
+
+                        >.container{
+                          margin-left: $inner-side-padding*2;
+                          float: left;
+                          height: $content-height;
+
+                          >.title{
+                            float: left;
+                          }
+                          >.input{
+                            box-sizing:  border-box;
+                            float: left;
+                            margin-left: 5px;
+                          }
+                        }
+
+                        >.container:first-child{
+                          margin-left: 0;
+                        }
+
+                        >.work-container{
+                          >.input{
+                            width: 170px;
+                          }
+                        }
+
+                        >.date-container{
+                          >.input{
+                            width: 135px;
+                            text-align: center;
+                          }
+                        }
+                        >.short-container{
+                           >.input{
+                             width: 50px;
+                             text-align: center;
+                           }
+                        }
+                        >.plain-container{
+                          >.input{
+                            width: 50px;
+                            text-align: center;
+                          }
+                        }
+                        >.ready-container{
+                          float: right;
+                          >.input{
+                            width: 75px;
+                            text-align: center;
+                          }
+                        }
+                      }
+                    }
+
+                    >.info-container{
+                      width: 100%;
+                      height: $info-height;
+                      float: left;
+                      border-bottom: 1px solid #e3e3e3;
+
+                      $content-height : 35px;
+
+                      >.content{
+                        width: calc(100% - #{$inner-side-padding * 2});
+                        margin-left: $inner-side-padding;
+                        height: $content-height;
+                        float: left;
+                        margin-top: ($info-height - $content-height)/2;
+                        position: relative;
+
+                        >.container{
+                          position: relative;
+                          height: 100%;
+                          display: inline-block;
+
+                          >.item:first-child{
+                            margin-left: 0;
+                          }
+                          >.item{
+                            display: inline-block;
+                            height: $content-height;
+                            line-height: $content-height;
+                            margin-left: $inner-side-padding * 2;
+
+                            >.title{
+                              float: left;
+                            }
+                            >.input{
+                              float: left;
+                              margin-left: 5px;
+                            }
+                          }
+                          >.net-container{
+                            >.input{
+                              width: 100px;
+                            }
+                          }
+                          >.estimate-amount{
+                            >.input{
+                              width: 75px;
+                              text-align: center;
+                            }
+                          }
+                          >.chalan-container{
+                            >.input{
+                              width: 75px;
+                              text-align: center;
+                            }
+                          }
+                        }
+                      }
+                    }
+                    >.payment-container{
+                      height: $payment-height;
+                      width: 100%;
+                      float: left;
+
+                      >.top{
+                        height: $top-height;
+                        width: 100%;
+                        float: left;
+                        line-height: $top-height;
+
+                        >.title{
+                          float: left;
+                          margin-left: $inner-side-padding;
+                        }
+                        >.info{
+                          float: right;
+                          margin-right: $inner-side-padding;
+                        }
+                      }
+
+                      $content-height : 35px;
+                      >.content{
+                        width: calc(100% - #{$inner-side-padding * 2});
+                        margin-left: $inner-side-padding;
+                        height: $content-height;
+                        float: left;
+                        margin-top: ($work-height - $top-height - $content-height)/2;
+                        line-height: $content-height;
+
+
+                        >.container{
+                          margin-left: $inner-side-padding*2;
+                          float: left;
+                          height: $content-height;
+
+                          >.title{
+                            float: left;
+                          }
+                          >.input{
+                            float: left;
+                            margin-left: 5px;
+                          }
+                        }
+
+                        >.container:first-child{
+                          margin-left: 0;
+                        }
+
+                        >.payment-type-container{
+                          >.input{
+                            width: 100px;
+                          }
+                        }
+
+                        >.date-container{
+                          >.input{
+                            width: 135px;
+                            text-align: center;
+                          }
+                        }
+                        >.account-container{
+                          >.input{
+                            width: 190px;
+                          }
+                        }
+                        >.amount-container{
+                          float: right;
+                          >.input{
+                            width: 75px;
+                            text-align: center;
+                          }
+                        }
+                      }
+
+                    }
+                  }
+
+                }
+
+
+              }
+
+
+              > .container {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                display: none;
+                opacity: 0;
+                pointer-events: none;
+                z-index: 1;
+              }
+
+              > .active {
+                z-index: 2;
+                display: block;
+                opacity: 1;
+                pointer-events: auto;
+              }
+
+            }
+          }
+          > .active {
+            display: block;
+            opacity: 1;
+            pointer-events: auto;
+          }
+        }
+      }
+    }
+  }
+}
+textarea{
+  padding: 5px;
+}
+
+input:focus,textarea:focus{
+  border: 1px solid $color-orange !important;
+}
+
+input,textarea{
+  font-family: Cuprum-Regular;
+  font-size: 14px ;
+  outline: none ;
+  border: 1px solid #e3e3e3 ;
+  padding-left: 5px ;
+  padding-right: 5px ;
+  box-sizing: border-box ;
+  color: $color-black-main ;
+  transition: all .2s ;
+  border-radius: 2px ;
+}
+
+.btn {
+  height: $btn-height;
+  padding-left: $btn-padding;
+  padding-right: $btn-padding;
+  background: white;
+  float: left;
+  border-radius: $btn-radius;
+  line-height: $btn-height;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 3px 8px -2px #000000;
+}
+
+@font-face {
+  font-family: 'Cuprum-Regular';
+  src: url('../font/cuprum/Cuprum-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Cuprum-Bold';
+  src: url('../font/cuprum/Cuprum-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Cuprum-BoldItalic';
+  src: url('../font/cuprum/Cuprum-BoldItalic.ttf');
+}
+
+@font-face {
+  font-family: 'Cuprum-Italic';
+  src: url('../font/cuprum/Cuprum-Italic.ttf');
+}
+
+input[type='text'] {
+  height: 35px;
+  outline: none;
+}
+
+//scroll-bar webkit
+
+::-webkit-scrollbar {
+  width:5px;
+  position: absolute;
+  background: rgba(0,0,0,0);
+
+}
+
+::-webkit-scrollbar-button {
+  /* 2 */
+
+}
+
+::-webkit-scrollbar-track {
+  /* 3 */
+}
+
+::-webkit-scrollbar-track-piece {
+  /* 4 */
+}
+
+::-webkit-scrollbar-thumb {
+  /* 5 */
+  width: 5px;
+  position: absolute;
+  background: rgba(0,0,0,.4);
+}
+
+::-webkit-scrollbar-corner {
+  /* 6 */
+}
+
+::-webkit-resizer {
+  /* 7 */
+}
+
+
+/*default class*/
+.no-margin{
+  margin: 0 !important;
+}
+
+.no-margin-left{
+  margin-left: 0 !important;
+}
+
+.no-margin-right{
+  margin-right: 0 !important;
+}
+
+.no-margin-top{
+  margin-top: 0 !important;
+}
+
+.no-margin-bottom{
+  margin-bottom: 0 !important;
+}
+
+
+
+
+.no-padding{
+  padding: 0 !important;
+}
+
+.no-padding-left{
+  padding-left: 0 !important;
+}
+
+.no-padding-right{
+  padding-right: 0 !important;
+}
+
+.no-padding-top{
+  padding-top: 0 !important;
+}
+
+.no-padding-bottom{
+  padding-bottom: 0 !important;
+}
+
+
+
+.text-align-right{
+  text-align: right !important;
+}
+
+.text-align-left{
+  text-align: left !important;
+}
+
+.text-align-center{
+  text-align: center !important;
+}
+
+
+
+
+/* kendo ui dropdown*/
+.k-dropdown{
+  background: white none repeat scroll 0 0 !important;
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 35px;
+
+
+  >.k-state-focused{
+    border:  1px solid $color-blue-main !important;
+  }
+
+  >.k-dropdown-wrap{
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: $color-white;
+    box-shadow: none;
+
+    >.k-input{
+      height: 100%;
+      line-height: 35px;
+      margin: 0;
+      padding: 0;
+    }
+
+    >.k-select{
+      line-height: 32px;
+    }
+  }
+
+}
+
+//.k-state-selected, .k-state-selected:link, .k-state-selected:visited, .k-list > .k-state-selected, .k-list > .k-state-highlight, .k-panel > .k-state-selected, .k-ghost-splitbar-vertical, .k-ghost-splitbar-horizontal, .k-draghandle.k-state-selected:hover, .k-scheduler .k-scheduler-toolbar .k-state-selected, .k-scheduler .k-today.k-state-selected, .k-marquee-color {
+//  color: #fff;
+//  background-color: $color-blue-main;
+//  border-color: $color-blue-main;
+//}
+
+.k-list > .k-state-selected{
+  color: #fff;
+  background-color: $color-blue-main;
+  border-color: $color-blue-main;
+}
+
+
+/*kendo ui grid*/
+
+.my-grid{
+
+
+  $header-height : 45px;
+  $header-back-color : #757575;
+  $row-height : 40px;
+  $margin : 10px;
+
+  .k-state-focused{
+    box-shadow: none;
+  }
+
+  td,tr{
+    padding-left: $margin;
+    padding-right: $margin;
+    text-indent: 0;
+  }
+
+
+  >.k-grid-header{
+    table{
+      >thead{
+        >tr{
+          height: $header-height;
+          >th{
+            padding-top: 0;
+            padding-bottom: 0;
+            line-height: $header-height;
+            color: $color-white !important;
+            background: $header-back-color !important;
+
+            >a{
+              color: $color-white;
+              height: 45px;
+              line-height: 45px;
+              padding: 0;
+              margin: 0;
+
+              >span{
+                color: $color-white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  >.k-grid-content{
+    height: calc(100% - #{$header-height});
+
+    table{
+      tbody{
+        tr{
+          >.border{
+            border-bottom:  1px solid #e0e0e0;
+          }
+          >td{
+            border-bottom: 1px solid #e0e0e0;
+            box-sizing: border-box;
+            height: $row-height + 1;
+            position: relative;
+          }
+          >.k-edit-cell{
+            padding: 0;
+            >input{
+              text-indent: 0;
+              padding-left: $margin - 1px;
+              padding-right: $margin - 1px;
+              width: 100%;
+              height: $row-height !important;
+              box-sizing: border-box;
+              border: 1px solid transparent;
+              text-align: inherit;
+              border-radius: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*kendo ui date picker*/
+.k-datepicker{
+  $side-padding : 5px;
+  $inner-side-padding : $side-padding + 2px;
+  float: left;
+  height: 35px;
+  text-align: center;
+  width : 135px;
+
+
+
+
+
+  border-radius: 2px;
+  box-sizing: border-box;
+
+  >.k-state-focused{
+    border: 1px solid $color-orange !important;
+  }
+
+  >.k-picker-wrap{
+    border: 1px solid #e3e3e3;
+    background: white none repeat scroll 0 0;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    line-height: 35px;
+    box-shadow: none;
+
+    >.k-input:focus{
+      border: none !important;
+    }
+
+    >.k-input{
+      border-radius: 2px;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+      border: none;
+    }
+
+    >.k-select{
+      box-sizing: border-box;
+      line-height: 31px;
+      border-color: #e3e3e3;
+
+
+      >.k-icon{
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+
+/*kendo ui autocomplet*/
+.k-autocomplete{
+  background: white none repeat scroll 0 0;
+  border: medium none;
+  box-shadow: none!important;
+  box-sizing: border-box;
+  height: 100%;
+
+  >.k-input{
+    border: 1px solid #e3e3e3;
+    border-radius: 2px;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 0;
+    width: 100%;
+  }
+
+}
